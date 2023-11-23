@@ -12,7 +12,7 @@ def bubble_sort(items):
                 # ^ if the items before is greater than the item next to it, swap them
                 swapped = True
         if not swapped:
-            length -= 1 # Should hopefully decrease the length everytime the swap is made
+            length -= 1 # If already swapped, decrease the length
     return items
 
 item_list = [5,7,2,7,1,4,3] # Items
