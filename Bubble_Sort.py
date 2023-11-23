@@ -11,8 +11,8 @@ def bubble_sort(items):
                 items[i], items[i+1] = items[i+1], items[i]
                 # ^ if the items before is greater than the item next to it, swap them
                 swapped = True
-        if not swapped:
-            break
+        if not swapped: # no swapping means the list is sorted
+            break # so no need for further comparison
     return items
 
 item_list = [5,7,2,7,1,4,3] # Items
