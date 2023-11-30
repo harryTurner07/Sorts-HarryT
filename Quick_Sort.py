@@ -19,7 +19,7 @@ def quick_sort(items):
         return quick_sort(small_values) + [pivot_value] + quick_sort(large_values)
         # Return the small list, the original pivot item, and the large list all as one big big list
 
-list_of_items = [2,5,1,6,4,3]
+list_of_items = [9,1,2,8,7,3,4,6,5]
 print(quick_sort(list_of_items))
 
 # Bug(s)
