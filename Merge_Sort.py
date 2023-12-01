@@ -1,6 +1,6 @@
 """
 For this merge sort I've got an idea on how to implement it but it's quite difficult
-So in the meanwhile the actual merge code will be on Merge_Sort_2.py
+So in the meanwhile the actual merge code will be on Working_Merge_Sort.py
 And I'll actually finish this later. 
 """
 
