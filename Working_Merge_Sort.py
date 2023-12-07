@@ -1,23 +1,43 @@
-def merge_sort(list_a, list_b):
-    a = 0
-    b = 0
-    sorted_list = []
-    while a < len(list_a) and j < len(list_b):
-        first = list_a[a]
-        second = list_b[b]
-        if first < second:
-            #do stuff
-            pass
-        else:
-            #do other stuff
-            pass
-        #now, add the rest of the sublist with items left into the combined list
-        if True: # first list still has stuff in, add it all to the sorted list in the corrected positions
-            pass
-        else:
-            pass
-        return sorted_list
+def merge_sort(item_list):
+    if len(item_list) > 1:
+        middle_point = len(item_list) // 2
+        left = item_list[:middle_point]
+        right = item_list[middle_point:]
 
-list_a = [1,5,2,4,3]
-list_b = [6,10,7,9,8]
-print(merge_sort(list_a, list_b))
+        # Recursive call on each half
+        merge_sort(left)
+        merge_sort(right)
+
+        # Two iterators for traversing the two halves
+        half_a = 0
+        half_b = 0
+        
+        # Iterator for the main list
+        main_list = 0
+        
+        while half_a < len(left) and half_b < len(right):
+            if left[half_a] <= right[half_b]:
+              # The value from the left half has been used
+              item_list[main_list] = left[half_a]
+              # Move the iterator forward
+              half_a += 1
+            else:
+                item_list[main_list] = right[half_b]
+                half_b += 1
+            # Move to the next slot
+            main_list += 1
+
+        # For all the remaining values
+        while half_a < len(left):
+            item_list[main_list] = left[half_a]
+            half_a += 1
+            main_list += 1
+
+        while half_b < len(right):
+            item_list[main_list]=right[half_b]
+            half_b += 1
+            main_list += 1
+        return item_list
+
+list_of_items = [5,7,2,6,1,4,3]
+print(merge_sort(list_of_items))
