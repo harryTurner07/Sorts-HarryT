@@ -3,7 +3,6 @@ def merge_sort(item_list):
         middle_point = len(item_list) // 2
         left = item_list[:middle_point]
         right = item_list[middle_point:]
-
         # Recursive call on each half
         merge_sort(left)
         merge_sort(right)
@@ -32,7 +31,6 @@ def merge_sort(item_list):
             item_list[main_list] = left[half_a]
             half_a += 1
             main_list += 1
-
         while half_b < len(right):
             item_list[main_list]=right[half_b]
             half_b += 1
