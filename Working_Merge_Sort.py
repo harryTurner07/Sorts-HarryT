@@ -40,6 +40,8 @@ def merge_sort(item_list):
             half_b += 1
             main_list += 1
         return item_list
+    else:
+        return item_list , "List is one item - it's already sorted."
 
 list_of_items = [5,7,2,6,1,4,3]
 print(merge_sort(list_of_items))
