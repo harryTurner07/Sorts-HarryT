@@ -1,4 +1,8 @@
 def merge_sort(item_list):
+    """
+    A merge sort works by essentially splitting the list into single values, then ordering
+    them into one single list - re-ordering them if needed.
+    """
     if len(item_list) > 1:
         middle_point = len(item_list) // 2
         left = item_list[:middle_point]
