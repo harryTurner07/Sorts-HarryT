@@ -1,6 +1,6 @@
 def merge_sort(item_list):
     """
-    A merge sort works by essentially splitting the list into single values, then ordering
+    A merge sort works by essentially splitting the list into sublists, then ordering
     them into one single list - re-ordering them if needed.
     """
     if len(item_list) > 1:
